@@ -11,4 +11,12 @@
 <div class="jumbotron" style="background-color: LightCyan">
     <h1 class="text-center"><img src="\image\@(Model.League.LeagueId)\@(Model.League.LeagueId).png" alt="NFL" />@(Model.League.Name)</h1>
 </div>
+<div class="jumbotron">
+        @foreach(Conference c in Model.Conferences)
+    {
+        <h2>
+            <a asp-page="/privacy">@c.Name</a>
+        </h2>
+    }
+</div>
 

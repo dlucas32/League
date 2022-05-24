@@ -155,3 +155,4 @@ C:\Users\32dav\OneDrive\Desktop\LearnASP\LeagueStarter\obj\Debug\netcoreapp3.1\R
 C:\Users\32dav\OneDrive\Desktop\LearnASP\LeagueStarter\obj\Debug\netcoreapp3.1\Razor\Pages\Players\Players.cshtml.g.cs
 C:\Users\32dav\OneDrive\Desktop\LearnASP\LeagueStarter\obj\Debug\netcoreapp3.1\Razor\Pages\Teams\Index.cshtml.g.cs
 C:\Users\32dav\OneDrive\Desktop\LearnASP\LeagueStarter\obj\Debug\netcoreapp3.1\Razor\Pages\Teams\Team.cshtml.g.cs
+C:\Users\32dav\OneDrive\Desktop\LearnASP\LeagueStarter\obj\Debug\netcoreapp3.1\Razor\Pages\Conferences\Conference.cshtml.g.cs

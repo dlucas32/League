@@ -22,9 +22,11 @@ namespace League.Pages
       _context = context;
     }
     public League.Models.League League { get; set; }
+    public DbSet<Conference> Conferences { get; set; }
     public async Task OnGetAsync()
     {
         League = await _context.Leagues.FirstOrDefaultAsync();
+        Conferences =  _context.Conferences;
     }
   }
 }
