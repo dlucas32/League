@@ -1,1 +1,7 @@
-@page
+@page 
+@model ConferenceModel
+
+@foreach(Division d in @Model.divisions)
+{
+    <h2>@d.Name</h2>
+}

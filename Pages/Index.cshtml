@@ -15,7 +15,7 @@
         @foreach(Conference c in Model.Conferences)
     {
         <h2>
-            <a asp-page="/privacy">@c.Name</a>
+            <a asp-page="/Conferences/Conference" asp-route-name=@c.Name> @c.Name</a>
         </h2>
     }
 </div>

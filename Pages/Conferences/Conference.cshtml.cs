@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using League.Data;
@@ -11,15 +12,20 @@ namespace League.Pages
 {
     public class ConferenceModel : PageModel
     {
-        private readonly LeagueContext _context { get; set;}
-        public DbSet<Division> division { get; set; }
+        private readonly LeagueContext _context;
+        public List<Division> divisions { get; set; }
+        private Conference conference { get; set; }
         public ConferenceModel(LeagueContext context)
         {
             _context = context;
         }
-        public async Task OnGetAsync(string id)
+        public async Task OnGetAsync(string name)
         {
-            division = (DbSet<Division>)_context.Divisions.Where(d => d.ConferenceId == id);
+            conference = await _context.Conferences.FirstOrDefaultAsync(c => c.Name == name);
+            var division = from d in _context.Divisions select d;
+            division = division.Where(d => d.ConferenceId.Contains(conference.ConferenceId));
+
+            divisions = await division.ToListAsync();
         }    
     }
 
